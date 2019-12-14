@@ -10,7 +10,7 @@ int ilosc(int c, string s){
 	int j = 0;
 	
 	
-	for(int i = 0; i < s.length(); i++){
+	for(int i = 0; i < s.length()-1; i++){
 		if(s[i] == c){
 			j++;
 		}
