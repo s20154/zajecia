@@ -10,8 +10,10 @@ enum Transport {
 
 int main(){
 	srand((int) time(NULL));
+	
+	Transport losu_losu = Transport(rand() % 5);
 
-	switch(rand() % 5){
+	switch(int(losu_losu)){
 		case SAMOCHOD:
 			cout <<"Jade samochodem!"<< endl;
 			break;
