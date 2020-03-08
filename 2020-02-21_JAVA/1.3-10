@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        int wielka = 32;
+        String s;
+
+        Scanner in = new Scanner(System.in);
+        int[] ilosc = new int[256];
+          
+        while (in.hasNext()){
+            s = in.next();
+            for (int i = 0; i < s.length(); i++) {
+                ilosc[s.charAt(i)]++;
+            }
+        }
+        
+        for(int i = 65; i <= 90; i++){
+            //System.out.print((char)i + "\t" + (ilosc[i]+ilosc[i+32]));
+            
+            if(ilosc[i] == 0 && ilosc[i+32] == 0){
+                System.out.print("\tfalse");
+                return;
+            }
+            //System.out.print("\n");
+        }
+        
+        
+        
+        
+        
+        System.out.print("true");
+        return;
+    }
+}

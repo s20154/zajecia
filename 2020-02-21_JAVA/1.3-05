@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        String m;
+        boolean wynik = true;
+        Scanner in = new Scanner(System.in);
+
+        m = in.next();
+
+        int i = 0;
+        int j = m.length() - 1;
+        
+        for(; i < j; i++, j--){
+            if(m.charAt(i) != m.charAt(j)){
+                wynik = false;
+                break;
+            }
+        }
+        
+        if(wynik == true){
+            System.out.print("TAK");
+        }else{
+            System.out.print("NIE");
+        }
+    }
+}
