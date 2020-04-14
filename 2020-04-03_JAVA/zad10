@@ -1,0 +1,38 @@
+interface Int1 {
+    void x();
+}
+
+interface Int2 {
+    int x(int a, int b, int c);
+}
+
+interface Int3 {
+    void x(int a);
+}
+
+interface Int4 {
+    int x(int a);
+}
+
+class Lambdy {
+    public static void main(String[] args){
+        Int1 wyswietl = () -> System.out.println("Witam");
+        wyswietl.x();
+
+        Int2 dodaj = (a, b, c) -> (a+b+c);
+        System.out.println(dodaj.x(1,20, 500));
+
+        Int3 wyswietl2 = (x) -> System.out.println(x);
+        wyswietl2.x(2137);
+
+        Int4 potega = (x) -> {
+            System.out.println("Poteguje...");
+            return x*x;
+        };
+
+        System.out.println(potega.x(14));
+
+
+    }
+
+}

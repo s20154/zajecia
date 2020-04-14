@@ -1,0 +1,63 @@
+interface Movable {
+    void moveUp();
+    void moveDown();
+    void moveLeft();
+    void moveRight();
+}
+
+class MovablePoint implements Movable {
+    private int x, xSpeed;
+    private int y, ySpeed;
+
+    public MovablePoint(int x, int xSpeed, int y, int ySpeed) {
+        this.x = x;
+        this.xSpeed = xSpeed;
+        this.y = y;
+        this.ySpeed = ySpeed;
+    }
+
+    public void moveUp(){
+        y += ySpeed;
+    }
+
+    public void moveDown(){
+        y -= ySpeed;
+    }
+
+    public void moveRight(){
+        x += xSpeed;
+    }
+
+    public void moveLeft(){
+        x -= xSpeed;
+    }
+
+    @Override
+    public String toString() {
+        return "MovablePoint{" +
+                "x=" + x +
+                ", xSpeed=" + xSpeed +
+                ", y=" + y +
+                ", ySpeed=" + ySpeed +
+                '}';
+    }
+}
+
+class Test{
+    public static void main(String[] args){
+        MovablePoint a = new MovablePoint(0, 3, 0,6);
+        System.out.println(a.toString());
+        a.moveUp();
+        System.out.println("Moving up...");
+        System.out.println(a.toString());
+        a.moveDown();
+        System.out.println("Moving down...");
+        System.out.println(a.toString());
+        a.moveLeft();
+        System.out.println("Moving left...");
+        System.out.println(a.toString());
+        a.moveRight();
+        System.out.println("Moving right...");
+        System.out.println(a.toString());
+    }
+}

@@ -1,0 +1,30 @@
+	1 zad
+public interface Relatable
+
+	2 zad
+public class Customer implements Relatable
+
+	3 zad
+public class Employee implements Payable, Listable
+
+	4 zad
+final, new, metodę abstrakcyjną, interfejsu funkcyjnego
+
+	5 zad
+-
++
+-
++
+-
++
+
+	6 zad
+public class Stereo extends SoundSystem implements CDPlayable, TunerPlayable, CassettePlayable
+
+	7 zad
+Computable half = x -> x / 2;
+
+
+
+
+
